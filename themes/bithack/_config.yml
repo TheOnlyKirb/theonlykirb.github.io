@@ -1,0 +1,49 @@
+slogan: "Bananas for bandannas"
+
+show_heart: true
+
+show_slogan: true
+
+menu:
+  - title: Archives
+    url: archives
+    intro: "All the articles."
+    # icon: "fa fa-archive"
+  - title: About
+    url: about
+    intro: "About me."
+    # icon: "fa fa-user"
+  - title: Source
+    url: source
+    intro: "Website theme / platform"
+    # icon: "fa fa-user"
+
+links:
+  - title: Portfolio
+    url: https://ajnicoloff.me
+    intro: ""
+    icon: "fa fa-linkedin"
+
+  # - title: "My LinkedIn"
+  #   url: http://www.linkedin.com/in/xxx
+  #   intro: "My Linkin account."
+  #   icon: "fa fa-linkedin"
+
+widgets:
+- search
+- category
+- tagcloud
+- recent_posts
+- links
+
+rss: 
+fancybox: true
+favicon: favicon.png
+
+
+# Analytics (change to yours)
+google_analytics:
+  enable: false
+  siteid: UA-70812759-1
+
+  
