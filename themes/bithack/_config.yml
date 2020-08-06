@@ -1,4 +1,4 @@
-slogan: "Bananas for bandannas"
+slogan: "Always watchin'"
 
 show_heart: true
 
@@ -17,10 +17,13 @@ menu:
     url: source
     intro: "Website theme / platform"
     # icon: "fa fa-user"
+  - title: Tags
+    url: tags
+    intro: "List of All Tags"
 
 links:
-  - title: Portfolio
-    url: https://ajnicoloff.me
+  - title: My Linkedin
+    url: https://www.linkedin.com/in/aj-nicoloff-0b1208194
     intro: ""
     icon: "fa fa-linkedin"
 
@@ -32,7 +35,6 @@ links:
 widgets:
 - search
 - category
-- tagcloud
 - recent_posts
 - links
 
