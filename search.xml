@@ -5,8 +5,8 @@
     
     <entry>
       <title>Projects Update</title>
-      <link href="/projects/"/>
-      <url>/projects/</url>
+      <link href="/post/projects/"/>
+      <url>/post/projects/</url>
       
         <content type="html"><![CDATA[<p>Here is a current list of former, and active projects of mine.</p><h1 id="Former-Projects"><a href="#Former-Projects" class="headerlink" title="Former Projects"></a>Former Projects</h1><p><strong>Shout</strong> - An online social media platform to shout thoughts anonymously into the ether<br><strong>Cafe Discord Bot</strong> - An incremental chat game based on being idle and creating a Cafe<br><strong>Listener.Monster</strong> - An online radio hub with icecast2 relays for each indie station.</p><h1 id="Active-Projects"><a href="#Active-Projects" class="headerlink" title="Active Projects"></a>Active Projects</h1><ul><li>None</li></ul>]]></content>
       
@@ -26,8 +26,8 @@
     
     <entry>
       <title>New Site</title>
-      <link href="/newsite/"/>
-      <url>/newsite/</url>
+      <link href="/post/newsite/"/>
+      <url>/post/newsite/</url>
       
         <content type="html"><![CDATA[<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome!"></a>Welcome!</h1><p>This is my new github pages website/blog. I’ll be posting about interesting websites I find, new open source projects, and anything I find worthy to be discussed.</p><hr><p>Check back later for more posts! I’m still setting things up!</p>]]></content>
       

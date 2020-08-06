@@ -15,18 +15,19 @@
     -moz-border-radius: 6px;
     border-radius: 6px
 }
-
+* {
+    cursor: url('../assets/fire.png'), w-resize !important;
+}
 body {
     position: relative;
     padding-top: 40px;
-    padding-bottom: 70px
+    padding-bottom: 70px;
 }
-
 .content {
     padding: 20px;
     -webkit-border-radius: 6px 6px 6px 6px;
     -moz-border-radius: 6px 6px 6px 6px;
-    border-radius: 6px 6px 6px 6px
+    border-radius: 6px 6px 6px 6px;
 }
 
 #sidebar {
@@ -75,6 +76,7 @@ body {
     margin-right: 0px !important;
     background-color: transparent;
 }
+
 .navbar-brand:hover {
     text-decoration: none;
     text-shadow: 0 1px 0 rgba(255, 255, 255, .1), 0 0 30px rgba(255, 255, 255, .4)
