@@ -7,4 +7,4 @@ shortDesc: This is a new blog with the intention of creating a humb...
 
 # Humble Abode Reached
 
-This is my humble abode, please, take a seat
+This is my humble abode, please, take a seat and sip some tea
