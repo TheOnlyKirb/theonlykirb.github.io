@@ -1,7 +1,11 @@
 ---
-title: projects
-date: 2020-08-06 00:56:25
+title: Projects Update
+date: 2020-08-06 11:50:47
+tags:
+- projects
+- new
 ---
+Here is a current list of former, and active projects of mine.
 
 # Former Projects
 
@@ -9,6 +13,6 @@ date: 2020-08-06 00:56:25
 **Cafe Discord Bot** - An incremental chat game based on being idle and creating a Cafe
 **Listener.Monster** - An online radio hub with icecast2 relays for each indie station.
 
-# Current Projects
+# Active Projects
 
 - None

@@ -5,17 +5,11 @@ tags:
 - new
 - first
 shortDesc: Welcome to my Hexo Blog
-author: Admin
+author: AJ
 ---
 
-# Morbi sed finibus 
+# Welcome!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dapibus magna eget odio luctus pretium. Pellentesque mauris augue, tempus vel porttitor et, accumsan ac lectus. Nullam tellus nisi, dapibus vel rutrum non, ullamcorper in nisi. Vivamus quis lectus risus. Vivamus venenatis diam venenatis nulla venenatis dignissim. Cras malesuada purus at sagittis fermentum. Cras sodales ligula et elit aliquet, a gravida enim porttitor. Nunc ultricies, erat eu mollis ultrices, libero ante varius arcu, a lacinia tortor ipsum non mauris.
-
-Duis vel auctor augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce convallis placerat convallis. Aenean elementum, mauris vitae hendrerit pulvinar, tellus ante venenatis metus, vel dignissim diam justo quis nibh. Nulla nec velit in enim ultricies mollis sed ut nunc. Nulla eu ligula nec tellus semper fermentum. Praesent ullamcorper nec ligula et congue. Nunc ac tincidunt leo, in dictum lectus. Sed vitae porttitor turpis. Sed at cursus leo. Sed egestas, tellus eget interdum pulvinar, enim tortor venenatis sapien, sit amet maximus felis enim nec risus. Fusce ut semper quam.
+This is my new github pages website/blog. I'll be posting about interesting websites I find, new open source projects, and anything I find worthy to be discussed.
 ___
-Nullam dolor velit, dapibus porta ultrices id, tempor id est. Sed quis erat sit amet libero fringilla bibendum quis id dui. Phasellus eu blandit purus. Donec faucibus et purus porttitor posuere. Nunc pretium nunc a nisl dictum pulvinar. Praesent nulla nunc, fermentum non varius sed, tristique eu lacus. Morbi aliquam bibendum ultrices. Suspendisse blandit nec nisl ac molestie. Suspendisse lobortis ligula sit amet ornare tristique.
-
-Morbi sed finibus lorem, tincidunt placerat felis. Quisque venenatis libero velit, in eleifend odio aliquet vel. Nullam in est eu tellus tincidunt posuere. Vestibulum semper enim turpis, non tempus tortor ultrices et. Nam quis orci eu nisl aliquam fermentum. Praesent ut imperdiet tortor. Nulla vitae vulputate erat. Pellentesque dignissim leo in sapien vehicula, nec fermentum nunc aliquam. Aenean blandit quam a nisi lobortis sodales. Donec et massa a tellus vulputate fermentum eget vitae mi. Quisque semper consequat placerat. Maecenas tincidunt, nisl non mattis iaculis, nisl metus accumsan velit, non blandit ex augue sit amet mauris. Nullam eget tempus dui, quis ornare eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam mattis metus ut neque scelerisque, a feugiat est maximus. Suspendisse potenti.
-
-In eu mi tristique, placerat ex vitae, ornare nibh. Donec placerat a arcu ut imperdiet. Nam viverra rhoncus felis, eget rhoncus ante rutrum at. Aenean nec aliquam ante. Integer justo sapien, malesuada a mollis eu, ultricies vel felis. Curabitur nisl est, pulvinar a odio in, tristique lobortis orci. Nam posuere nulla vel augue placerat dignissim. Nam sodales ultrices pharetra. Nullam pulvinar posuere nisi sed condimentum. Suspendisse a arcu urna. Maecenas in blandit nisi. Ut eget lacus faucibus, pretium dolor vitae, lacinia quam.
+Check back later for more posts! I'm still setting things up!
