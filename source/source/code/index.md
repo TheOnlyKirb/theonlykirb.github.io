@@ -8,7 +8,7 @@ The goal of this section of my site is to allow for the sharing and learning of 
 ___
 
 # Sections / Topics
-#### - Beginners Basic Bot
+#### - [Beginners Basic Bot](/source/code/topics/basicbot)
 #### - More Advanced Bot Setup
 #### - Helpful Tools
 #### - Free To Use Commands
