@@ -1,3 +1,7 @@
+
+# Fair Warning
+I've modified this theme to fit my own site, with my own wants and needs, please refer to the original repo for the theme, and do not download the theme via my github site, I promise you it will not work properly
+
 Hexo-Theme-freemind.bithack
 ===
 
