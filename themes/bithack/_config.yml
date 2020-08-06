@@ -14,8 +14,8 @@ menu:
     intro: "About me."
     # icon: "fa fa-user"
   - title: Source
-    url: source
-    intro: "Website theme / platform"
+    url: source/code
+    intro: "Discord.JS Bot Code"
     # icon: "fa fa-user"
   - title: Tags
     url: tags
