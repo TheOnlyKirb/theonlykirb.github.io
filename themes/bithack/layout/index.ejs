@@ -1,12 +1,10 @@
-<div class="page-header">
+<div class="page-header" style="border-bottom: 1px solid #6fec8e;">
   <style>
     @media only screen and (max-width: 600px) {
       .ghostIcon {
-        width: 150px;
-        height: 150px;
-        margin: auto;
-        float: left;
-        margin-top: -15px !important;
+        width: 100px;
+        height: 100px;
+        float: right !important;
       }
     }
     .ghostIcon {
@@ -17,8 +15,8 @@
     margin-top: -50px;
     }
   </style>
-  <h1><img src="../assets/ghost.gif"
-      class="ghostIcon"><% if (config.subtitle){ %><%= config.subtitle%><% } else { %><%= config.title%><% }%><span
+  <img src="../assets/ghost.gif"
+  class="ghostIcon"><h1><% if (config.subtitle){ %><%= config.subtitle%><% } else { %><%= config.title%><% }%><span
       class="blink-fast">|</span></h1>
 </div>
 
