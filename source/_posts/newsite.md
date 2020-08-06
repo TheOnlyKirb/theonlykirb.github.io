@@ -4,7 +4,7 @@ date: 2020-08-05 23:35:20
 tags:
 - new
 - first
-shortDesc: Welcome to my Hexo Blog
+shortDesc: Welcome to my new blog
 author: AJ
 ---
 

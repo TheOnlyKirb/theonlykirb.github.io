@@ -4,6 +4,7 @@ date: 2020-08-06 11:50:47
 tags:
 - projects
 - new
+shortDesc: A list of current and former projects of mine
 ---
 Here is a current list of former, and active projects of mine.
 
