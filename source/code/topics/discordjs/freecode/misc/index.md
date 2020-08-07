@@ -31,6 +31,7 @@ return message.channel.send(args.join(" ").split("").reverse().join(""))
 #### [4] Mock
 - Doesn't require user input! Grabs the last message sent and mocks it!
 - Beware, this works weirdly on embed content because of the DiscordAPI
+
 ```js
 message.channel.messages.fetch({ limit: 2 }).then(found => {
     var obtainedMsgs = Array.from(found)
