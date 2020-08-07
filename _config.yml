@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: AJ Nicoloff
+title: 'The Watchpost'
 subtitle: 'The Watchpost'
-description: ''
-keywords:
-author: AJ
-language: en
+description: 'My Blog/Website, will Tutorials, and just my general thoughts.'
+keywords: 'code, blog, website, cofc'
+author: 'AJ Nicoloff'
+language: 'en'
 timezone: 'America/New_York'
 
 # URL

@@ -5,6 +5,7 @@ tags:
 - projects
 - new
 shortDesc: A list of current and former projects of mine
+author: AJ
 ---
 Here is a current list of former, and active projects of mine.
 
