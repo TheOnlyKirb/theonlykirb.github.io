@@ -6,15 +6,17 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>tags | AJ Nicoloff</title>
+  <title>Misc Commands | AJ Nicoloff</title>
   <meta name="author" content="AJ">
   
-  <meta name="description" content="Updated Automatically, just click one to get taken to all posts with that tag!">
+  <meta name="description" content="Misc commands you may find useful. Some require a get or post request which I find the module node-fetch to be useful for.
+[1] Hastebin
+Replace &amp;lt;TY">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="tags"/>
+  <meta property="og:title" content="Misc Commands"/>
   <meta property="og:site_name" content="AJ Nicoloff"/>
 
   
@@ -93,7 +95,7 @@
 
 <div class="page-header">
 	<h1>
-		tags</h1>
+		Misc Commands</h1>
 	
 
 </div>
@@ -110,31 +112,23 @@
 			<div class="mypage">
 				
 
-				<p>Updated Automatically, just click one to get taken to all posts with that tag!</p>
+				<p>Misc commands you may find useful. Some require a <code>get</code> or <code>post</code> request which I find the module <code>node-fetch</code> to be useful for.</p>
+<h4 id="1-Hastebin"><a href="#1-Hastebin" class="headerlink" title="[1] Hastebin"></a>[1] Hastebin</h4><ul>
+<li>Replace <code>&lt;TYPE&gt;</code> with “Kicked”, “Banned”, or “Unbanned”</li>
+<li>Replace <code>.kick</code> with <code>.ban</code> for bans, and <code>.unban</code> for unbans</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&quot;node-fetch&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> (!args || !args[<span class="number">0</span>]) <span class="keyword">return</span> message.channel.send(<span class="string">&quot;❌ **Error** \`|\` Please specify a text to post to hastebin!&quot;</span>) <span class="comment">// check if the user provides an argument</span></span><br><span class="line">http(<span class="string">&quot;https://hastebin.com/documents&quot;</span>, &#123;<span class="attr">method</span>: <span class="string">&quot;POST&quot;</span>, <span class="attr">body</span>: <span class="string">`<span class="subst">$&#123;args.join(<span class="string">&quot; &quot;</span>)&#125;</span>`</span>&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> res.json()).then(<span class="function"><span class="params">json</span> =&gt;</span> message.channel.send(<span class="string">`https://hastebin.com/<span class="subst">$&#123;json.key&#125;</span>`</span>))</span><br></pre></td></tr></table></figure>
 
-				
-				<div>
-					<ul class="tag_box inline list-unstyled">
-						
-						<li><a
-								href="/tags/projects/"><i class="fa fa-tag"></i>projects<span>1</span></a>
-						</li>
-						
-						<li><a
-								href="/tags/new/"><i class="fa fa-tag"></i>new<span>2</span></a>
-						</li>
-						
-						<li><a
-								href="/tags/first/"><i class="fa fa-tag"></i>first<span>1</span></a>
-						</li>
-						
-					</ul>
-				</div>
 				
 			</div>
 
 
 	
+				<span id="/code/topics/discordjs/freecode/misc/" class="leancloud-visitors view"
+					data-flag-title="Misc Commands">
+					<em class="post-meta-item-text"> Page View </em> <i class="leancloud-visitors-count"></i>
+				</span>
+				
 				<div>
 					<center>
 

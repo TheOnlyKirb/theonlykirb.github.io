@@ -10,8 +10,8 @@
   <meta name="author" content="AJ">
   
   <meta name="description" content="Simple, utilizing just the Discord.JS library, nothing fancy. Good for small bots, or beginners.
-[1-2] Kick / Ban
-Replace &amp;lt;TYPE&amp;gt; with “Kicked” o">
+[1-2] Kick / Ban / Unban
+Replace &amp;lt;TYPE&amp;gt; with “K">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -113,9 +113,9 @@ Replace &amp;lt;TYPE&amp;gt; with “Kicked” o">
 				
 
 				<p>Simple, utilizing just the Discord.JS library, nothing fancy. Good for small bots, or beginners.</p>
-<h4 id="1-2-Kick-Ban"><a href="#1-2-Kick-Ban" class="headerlink" title="[1-2] Kick / Ban"></a>[1-2] Kick / Ban</h4><ul>
-<li>Replace <code>&lt;TYPE&gt;</code> with “Kicked” or “Banned”</li>
-<li>Replace <code>.kick</code> with <code>.ban</code> for bans</li>
+<h4 id="1-2-Kick-Ban-Unban"><a href="#1-2-Kick-Ban-Unban" class="headerlink" title="[1-2] Kick / Ban / Unban"></a>[1-2] Kick / Ban / Unban</h4><ul>
+<li>Replace <code>&lt;TYPE&gt;</code> with “Kicked”, “Banned”, or “Unbanned”</li>
+<li>Replace <code>.kick</code> with <code>.ban</code> for bans, and <code>.unban</code> for unbans</li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!args || !args[<span class="number">0</span>]) <span class="keyword">return</span> message.channel.send(<span class="string">&quot;❌ **Error** \`|\` Please specify a Member to &lt;TYPE&gt;!&quot;</span>) <span class="comment">// check if the user provides an argument</span></span><br><span class="line"><span class="keyword">var</span> member = message.guild.members.cache.get(args[<span class="number">0</span>].match(<span class="regexp">/\d&#123;17,18&#125;/</span>)[<span class="number">0</span>]) <span class="comment">// checks if the argument is a member id, this works with pings or pasting a member id</span></span><br><span class="line"><span class="keyword">if</span> (!member) <span class="keyword">return</span> message.channel.send(<span class="string">&quot;❌ **Error** \`|\` That Member doesn&#x27;t exist!&quot;</span>) <span class="comment">// if the member doesn&#x27;t exist, say so</span></span><br><span class="line">member.kick().catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123; <span class="comment">// attempt to kick the member</span></span><br><span class="line">    <span class="keyword">if</span> (error) <span class="keyword">return</span> message.channel.send(<span class="string">&quot;❌ **Error** \`|\` Permissions Error, unable to proceed.&quot;</span>) <span class="comment">// if it fails, say so</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">result</span> =&gt;</span> &#123; <span class="comment">// take the result of the catch - if it contains channel data, it failed</span></span><br><span class="line">    <span class="keyword">if</span> (!result.channel) <span class="keyword">return</span> message.channel.send(<span class="string">`✅ **Success** \`|\` Successfully &lt;TYPE&gt; **<span class="subst">$&#123;result.user.username&#125;</span>#<span class="subst">$&#123;result.user.discriminator&#125;</span>**`</span>) <span class="comment">// if it didn&#x27;t fail, let them know it was successful</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h4 id="3-4-Mute-Unmute"><a href="#3-4-Mute-Unmute" class="headerlink" title="[3-4] Mute / Unmute"></a>[3-4] Mute / Unmute</h4><ul>
