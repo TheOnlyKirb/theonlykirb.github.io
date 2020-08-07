@@ -42,3 +42,36 @@ message.channel.messages.fetch({ limit: 2 }).then(found => {
     }
 })
 ```
+#### [5] New Subreddit List
+- For more results, change `?limit=5`
+- NSFW subreddits will only show in a NSFW channel
+
+```js
+var http = require("node-fetch")
+http(`https://reddit.com/subreddits/new/.json?limit=5`).then(res => res.json()).then(json => {
+    let subs = ""
+    json.data.children.forEach(sub => {
+        if(sub.data.over18 && !message.channel.nsfw) `➤ Omitted [18+]\n`
+        else subs += `➤ **<https://reddit.com/${sub.data.display_name_prefixed}>**\n`
+    })
+    return message.channel.send(`📝 **New Subreddits**\n\n${subs}\n_Provided by the Reddit API_`)
+})
+```
+#### [5] r/AskReddit
+- Only retrieves 1 random post
+
+```js
+var http = require("node-fetch")
+http(`https://reddit.com/r/AskReddit/random/.json?limit=1`).then(res => res.json()).then(json => {
+    return message.channel.send(`📣 **r/AskReddit** \`|\` ${json[0].data.children[0].data.title}`)
+})
+```
+#### [6] r/Memes
+- Retrieves 1 Random meme
+
+```js
+var http = require("node-fetch")
+http(`https://reddit.com/r/Memes/random/.json?limit=1`).then(res => res.json()).then(json => {
+    return message.channel.send(`😆 **r/Meme**\n**Title:** ${json[0].data.children[0].data.title}\n${json[0].data.children[0].data.url}`)
+})
+```
