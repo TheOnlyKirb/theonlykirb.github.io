@@ -8,18 +8,19 @@ menu:
   - title: Archives
     url: archives
     intro: "All the articles."
-    # icon: "fa fa-archive"
+    icon: "fa fa-archive"
   - title: About
     url: about
     intro: "About me."
-    # icon: "fa fa-user"
+    icon: "fa fa-user"
   - title: Tutorials / Code
     url: code/landing/
     intro: "Discord.JS Bot Code"
-    # icon: "fa fa-user"
+    icon: "fa fa-code"
   - title: Tags
     url: tags
     intro: "List of All Tags"
+    icon: "fa fa-tag"
 
 links:
   - title: My Linkedin
