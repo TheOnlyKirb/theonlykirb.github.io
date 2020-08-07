@@ -10,5 +10,6 @@ ___
 # Sections / Topics
 #### - [Beginners Basic Bot](/source/code/topics/basicbot)
 #### - More Advanced Bot Setup
+- [Command Handling](/source/code/topics/commandhandling)
 #### - Helpful Tools
 #### - Free To Use Commands
