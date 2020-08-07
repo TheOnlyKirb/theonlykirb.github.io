@@ -4,9 +4,9 @@ date: 2020-08-06 14:56:32
 ---
 Simple, utilizing just the Discord.JS library, nothing fancy. Good for small bots, or beginners.
 
-#### [1-2] Kick / Ban
-- Replace `<TYPE>` with "Kicked" or "Banned"
-- Replace `.kick` with `.ban` for bans
+#### [1-2] Kick / Ban / Unban
+- Replace `<TYPE>` with "Kicked", "Banned", or "Unbanned"
+- Replace `.kick` with `.ban` for bans, and `.unban` for unbans
 
 ```js
 if (!args || !args[0]) return message.channel.send("❌ **Error** \`|\` Please specify a Member to <TYPE>!") // check if the user provides an argument

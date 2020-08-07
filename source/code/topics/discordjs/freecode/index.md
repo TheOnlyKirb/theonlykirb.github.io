@@ -20,3 +20,4 @@ ___
 
 # Pages
 - [Basic Mod Commands](/code/topics/discordjs/freecode/basicmod)
+- [Misc Commands](/code/topics/discordjs/freecode/misc)
