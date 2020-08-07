@@ -33,3 +33,18 @@ if (error) return message.channel.send("❌ **Error** \`|\` Permissions Error, u
 if (!result.channel) return message.channel.send(`✅ **Success** \`|\` Successfully <TYPE> **${result.user.username}#${result.user.discriminator}**`)
 })
 ```
+#### [5-6] Addrole / Removerole
+- Replace `<TYPE>` with "Added" or "Removed"
+- Replace `.roles.add` with `.roles.remove` to remove the role
+```js
+if (!args || !args[0] || !args[1]) return message.channel.send("❌ **Error** \`|\` Please specify a Member and then a Role Name!") //addrole @Member Test
+var member = message.guild.members.cache.get(args[0].match(/\d{17,18}/)[0])
+var role = message.guild.roles.cache.find(role => role.name.toLowerCase() === args[1].toLowerCase()) // sorts through the role names
+if (!member) return message.channel.send("❌ **Error** \`|\` That Member doesn't exist!")
+if (!role) return message.channel.send("❌ **Error** \`|\` That Role couldn't be found!")
+member.roles.add(role.id).catch(error => {
+    if (error) return message.channel.send(`❌ **Error** \`|\` Permissions Error, unable to proceed. Am I higher than the \`${role.name}\` Role?`)
+}).then(result => {
+    if (!result.channel) return message.channel.send(`✅ **Success** \`|\` Successfully <TYPE> the role \`${role.name}\` to **${result.user.username}#${result.user.discriminator}**`)
+})
+```
