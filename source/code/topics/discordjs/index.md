@@ -11,4 +11,4 @@ ___
 #### - [Beginners Basic Bot](/code/topics/discordjs/basicbot)
 #### - More Advanced Bot Setup
 #### - Helpful Tools
-#### - Free To Use Commands
+#### - [Free To Use Commands / Features](/code/topics/discordjs/freecode)
