@@ -55,12 +55,12 @@
 		<span class="date_class"> <%= item.date.format("YYYY-MM-DD") %> </span> &raquo;
 		<% if (item.link){ %>
 		   <% if (item.title){ %>
-		   	  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		   	  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a><% if(item.shortDesc) { %> <br> <span style="color: #6fec8e;"><i class="fa fa-paragraph"></i></span> <%=item.shortDesc%><%}%></span>
 		   <% } else { %>
 		   	  <span class="title link"><a href="<%- item.link %>" target="_blank" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a></span>
 		   <% } %>
 		<% } else { %>
-		   <span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a></span>
+		   <span class="title"><a href="<%- config.root %><%- item.path %>" <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a><% if(item.shortDesc) { %> <br> <span style="color: #6fec8e;"><i class="fa fa-paragraph"></i></span> <%=item.shortDesc%><%}%></span>
 		<% } %>
 		</li>			
 		<% }); %>
