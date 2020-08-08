@@ -237,45 +237,23 @@ Because of the bots structure, it becomes very easy to add an intuitive help com
 - You must place this *inside* a command export.
 
 ```js
-const Discord = require("discord.js")
-let categories = new Map(), embed = new Discord.MessageEmbed(), commandSpecific = null; // set the variables
-Client.commands.forEach(command => { // loop through the commands
-    if (!categories.get(command.help.category)) { // if the category doesnt exist in the map, set it
-        categories.set(command.help.category, {
-            commands: [] // include a commands segment
-        })
-    }
-    categories.get(command.help.category).commands.push(command.help) //push the commands into the Map
-})
-embed // create a base embed
-    .setTitle("Help")
-    .setDescription(`Specific Category: \`${Client.config.prefix}help [category]\`\nSpecific Command: \`${Client.config.prefix}help i [command]\``)
-    .setColor("RANDOM")
-Array.from(categories).forEach(category => { // loop through the available categories, convert the map to array format
-    let commands = "" // must be outside of the 
-    category[1].commands.forEach(command => { // loop through the commands in the category
-        if (args[0] && args[0].toLowerCase() === "i" && args[1] && args[1].toLowerCase() === command.name.toLowerCase()) commandSpecific = command;
-        // if they are searching for a specific command, set the commandSpecific variable otherwise, list out
-        commands += `\`${command.name}\` `
+    const Discord = require("discord.js")
+    let categories = [...new Set(Array.from(Client.commands).map(c => c[1].help.category))] // get our categories and remove duplicates
+    let embed = new Discord.MessageEmbed() // create embed
+    embed // setup embed
+    categories.forEach(category => {
+        const commands = Array.from(Client.commands).filter(c => c[1].help.category == category) // get all commands from the category
+        if (!args[0]) embed.addField(category, `\`${commands.map(c => c[1].help.name).join('`, `')}\``) // if no specific command, show the full menu
+        if (args[0] && commands.filter(c => c[1].help.name.toLowerCase() === args[0].toLowerCase()).length > 0) { // if the specified command matches an existing one, go ahead
+            let commandFound = commands.filter(c => c[1].help.name.toLowerCase() === args[0].toLowerCase())[0][1].help // grab the command asked for
+            embed.addField(`Command - ${commandFound.name.substr(0, 1).toUpperCase() + commandFound.name.substr(1)}`, `${commandFound.description}\n`) // embed the command info
+            if (commandFound.aliases.length > 0) embed.addField(`Available Aliases`, `\`${commandFound.aliases.join('`, `')}\``) // grab the aliases
+        }
     })
-    if (!args[0] || args[0].toLowerCase() === category[0].toLowerCase()) embed.addField(category[0].substr(0, 1).toUpperCase() + category[0].substr(1), `${commands}`, false)
-    // if they aren't searching for a command, or are getting a specific category or all categories, list them
-    })
-if (commandSpecific) { // if there is a specific command found, handle it
-let aliasList = ""
-commandSpecific.aliases.forEach(aliases => { // loop through the specific commands aliases
-    aliasList += `\`${aliases}\` `
-})
-embed.addField(`Command Description - ${commandSpecific.name.substr(0, 1).toUpperCase() + commandSpecific.name.substr(1)}`, `${commandSpecific.description}\n`) 
-// add a command description and alias list
-if (aliasList !== "") embed.addField(`Available Aliases`, `${aliasList}`)
-}
-// if nothing was added to the embed, nothing was found.
-if (embed.fields.length === 0) embed.addField("Nothing Found", `Your search parameters returned no results.`)
-//send the message
-message.channel.send(embed)
+    if (embed.fields.length === 0) embed.addField("Nothing Found", `Your search parameters returned no results.`) // if no results, say so
+    message.channel.send(embed) // send embed
 ```
-This command allows a user to query specific commands, specific categories, and view all categories at one time. Play around with it if it doesn't make a lot of sense, and **please** read the code comments! They are there to help you.
+This command allows a user to query specific commands, and view all commands at one time. Play around with it if it doesn't make a lot of sense, and **please** read the code comments! They are there to help you.
 ___
 
 ## Conclusion
