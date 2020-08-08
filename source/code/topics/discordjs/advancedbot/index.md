@@ -14,9 +14,9 @@ That being said there are some notes I'd like to get out of the way...
 **Furthermore** if you haven't setup your development environment, or don't have a bot application on Discord - please refer to the [Basic Bot Tutorial](/code/topics/discordjs/basicbot). As it goes through how to get setup.
 ___
 ## Creating a Configuration File & Basic File Tree
-One of the first things you should do before setting up a bot, is create a configuration file to include things such as your bots prefix, token, and other important details/credentials.
+One of the first things you should do before setting up a bot, is create a JSON configuration file to include things such as your bots prefix, token, and other important details/credentials.
 
-For this tutorial we will be using the simple file layout below.
+For this tutorial we will be using the simple JSON file layout below.
 ```json
 {
     "token": "Your_BotToken_Here",
@@ -96,9 +96,9 @@ Underneath the configuration variable from earlier, add the following code.
 Client.commands = new Map(); // creates a map to store commands in
 Client.aliases = new Map(); // does the same, but for aliases
 ```
-This adds `.commands` and `.aliases` to the client so they can be accessed anywhere the Client is.
+This adds `.commands` and `.aliases` to the client so they can be accessed anywhere the Client is, giving us an easy way to manipulate and run commands. For more information on Maps check out [this MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
 
-From here, we need to add the same thing we did with events, but for commands. In this tutorial I will be assuming categories/subfolders will exist in the commands folder for easy organization of commands. For example, `./commands/fun`.
+From here, we need to add the same thing we did with events, but for commands. In this tutorial I will be assuming categories/subfolders will exist in the commands folder for easy organization of commands. For example, `./commands/fun` or `./commands/general`.
 
 Let's go ahead and go over the command export structure before we set the commands.
 ```js
@@ -112,8 +112,9 @@ exports.help = {
     description: 'Command Description'
 };
 ```
+`exports.run` is exporting the actual code that will be run on a command call, while `exports.help` is exporting the command data for the help command, and command identification.
 
-Now that we know the command structure, we can set the commands like we did with the events! Do note, normally you wouldn't want to have this many nested loops, but in this case it is necessary.
+Now that we know the command structure, we can set the commands like we did with the events! Do note, normally you wouldn't want to have this many nested loops, but in this case it is practical.
 
 ```js
 fs.readdir("./commands", (err, categories) => {
@@ -137,7 +138,7 @@ fs.readdir("./commands", (err, categories) => {
     })
 })
 ```
-With this you have now mapped the commands and aliases to the maps we made earlier. Which means we can move onto running commands from the message event!
+The above code first begins by reading the base command directory, it looks to find any subfolders or "categories" of commands. When finished, there will be an array of folder names, the categories- which are then read for commands. Each category has its inner commands required, and then set to the map we made earlier. If something fails, it is within a try catch statement that will log the error.
 ___
 ## Running Commands in the Message Event
 To get started, we need to make a `message.js` event file in our events folder. This is the file the bot will run when the message event is fired off.
@@ -162,7 +163,7 @@ if (!message.guild || message.IsPrivate || message.author.bot) return;
 
 Now, we only want the bot to respond to prefixed commands, OR commands being used when pinged. So let's add that. We already have the config setup, so we just need an array to check if the prefix is correct. To do this, add the following.
 ```js
-const prefix = [Client.config.prefix, `<@${Client.user.id}>`].find(p => message.content.toLowerCase().indexOf(p) === 0) // searches for the prefix in the message content
+const prefix = [Client.config.prefix, `<@${Client.user.id}>`].find(p => message.content.toLowerCase().indexOf(p) === 0) // searches for the prefix position in the message content
 if(!prefix) return; // if the prefix wasn't matching those in the array, return.
 ```
 
@@ -180,9 +181,9 @@ command.run(Client, message, args).catch(error => { // run the command, if error
     if(error) return console.error(error)
 })
 ```
-The above code has various comments to help understand it, but it essentially checks if the command exists, if it does, run it.
+The above code begins by taking the user input and breaking it up, removing the prefix. This then leaves you with mutatable user input which is split into an array of arguments, hence the variables name `args`. We then ensure the first argument is made into the command, removing it from the array and converting it to lowercase format. From here we are then checking if the commands map we made earlier contains the command, or if there is an alias that matches. If a command is found, it updates the command variable with the command exports/data and runs the command, if there is not a command found, it returns.
 
-Your final message.js event should look like this
+Your final message.js event should look like this!
 ```js
 exports.run = (Client, message) => {
     if (!message.guild || message.IsPrivate || message.author.bot) return;
