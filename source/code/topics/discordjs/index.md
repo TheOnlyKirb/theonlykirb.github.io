@@ -9,6 +9,6 @@ ___
 
 # Sections / Topics
 #### - [Beginners Basic Bot](/code/topics/discordjs/basicbot)
-#### - More Advanced Bot Setup
+#### - [More Advanced Bot Setup](/code/topics/discordjs/advancedbot)
 #### - Helpful Tools
 #### - [Free To Use Commands / Features](/code/topics/discordjs/freecode)
