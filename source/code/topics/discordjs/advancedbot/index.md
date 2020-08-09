@@ -94,9 +94,10 @@ Once you have events setup, you should get ready to add commands, but we need to
 Underneath the configuration variable from earlier, add the following code.
 ```js
 Client.commands = new Map(); // creates a map to store commands in
+Client.commands.categories = [] // an array of command categories
 Client.aliases = new Map(); // does the same, but for aliases
 ```
-This adds `.commands` and `.aliases` to the client so they can be accessed anywhere the Client is, giving us an easy way to manipulate and run commands. For more information on Maps check out [this MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map).
+This adds `.commands` and `.aliases` to the client so they can be accessed anywhere the Client is, giving us an easy way to manipulate and run commands. For more information on Maps check out [this MDN link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). It also adds an array of command categories for the help command and other features within `.commands.categories`
 
 From here, we need to add the same thing we did with events, but for commands. In this tutorial I will be assuming categories/subfolders will exist in the commands folder for easy organization of commands. For example, `./commands/fun` or `./commands/general`.
 
@@ -128,6 +129,7 @@ fs.readdir("./commands", (err, categories) => {
             files.forEach(filename => { // for each command file do the following
                 try {
                     let props = require(`./commands/${category}/${filename}`) // Require the file so we can use it's exports
+                    if(!Client.commands.categories.includes(props.help.category)) Client.commands.categories.push(props.help.category) // set the categories
                     Client.commands.set(props.help.name, props) // Set the command contents in the map we made earlier
                     props.help.aliases.forEach(alias => { // loop through the alias names and set them in the alias map
                         Client.aliases.set(alias, props.help.name) // set the alias name with the main command name
@@ -174,7 +176,9 @@ To do this, we need to break the command off of the prefix by spliting the messa
 ```js
 const args = message.content.slice(prefix.length).trim().split(/ +/g) // take off the prefix from the message, and split the user input into an array.
 const command = args.shift().toLowerCase(); // grab the first bit of user input.
-command = Client.commands.has(command) ? command = Client.commands.get(command) : Client.aliases.has(command) ? command = Client.commands.get(Client.aliases.get(command)) : command = null
+if (Client.commands.has(command)) command = Client.commands.get(command)
+else if (Client.aliases.has(command)) command = Client.commands.get(Client.aliases.get(command))
+if (!command.run) return;
 // if the commands map or aliases map has the command, set command = to the command, if not, set it to null.
 if(!command) return; // if the command doesn't have an actual function return.
 command.run(Client, message, args).catch(error => { // run the command, if error, log it.
@@ -191,8 +195,9 @@ exports.run = (Client, message) => {
     if(!prefix) return;
     const args = message.content.slice(prefix.length).trim().split(/ +/g)
     const command = args.shift().toLowerCase();
-    command = (Client.commands.has(command)) command = Client.commands.get(command) : Client.aliases.has(command) Client.commands.get(Client.aliases.get(command)) : command = null)
-    if(!command) return;
+    if (Client.commands.has(command)) command = Client.commands.get(command)
+    else if (Client.aliases.has(command)) command = Client.commands.get(Client.aliases.get(command))
+    if (!command.run) return;
     command.run(bot, message, args).catch(error => {
         if(error) return console.error(error)
     })
@@ -237,21 +242,16 @@ Because of the bots structure, it becomes very easy to add an intuitive help com
 - You must place this *inside* a command export.
 
 ```js
-    const Discord = require("discord.js")
-    let categories = [...new Set(Array.from(Client.commands).map(c => c[1].help.category))] // get our categories and remove duplicates
-    let embed = new Discord.MessageEmbed() // create embed
-    embed // setup embed
-    categories.forEach(category => {
-        const commands = Array.from(Client.commands).filter(c => c[1].help.category == category) // get all commands from the category
-        if (!args[0]) embed.addField(category, `\`${commands.map(c => c[1].help.name).join('`, `')}\``) // if no specific command, show the full menu
-        if (args[0] && commands.filter(c => c[1].help.name.toLowerCase() === args[0].toLowerCase()).length > 0) { // if the specified command matches an existing one, go ahead
-            let commandFound = commands.filter(c => c[1].help.name.toLowerCase() === args[0].toLowerCase())[0][1].help // grab the command asked for
-            embed.addField(`Command - ${commandFound.name.substr(0, 1).toUpperCase() + commandFound.name.substr(1)}`, `${commandFound.description}\n`) // embed the command info
-            if (commandFound.aliases.length > 0) embed.addField(`Available Aliases`, `\`${commandFound.aliases.join('`, `')}\``) // grab the aliases
-        }
-    })
-    if (embed.fields.length === 0) embed.addField("Nothing Found", `Your search parameters returned no results.`) // if no results, say so
-    message.channel.send(embed) // send embed
+const Discord = require("discord.js")
+let embed = new Discord.MessageEmbed(), commands = Array.from(Client.commands) // create variables, convert map to array
+if (args[0] && commands.filter(c => c[1].help.name.toLowerCase() == args[0].toLowerCase()).length > 0) { // if the command being searched matches something run this
+    let commandFound = commands.filter(c => c[1].help.name == args[0].toLowerCase())[0][1].help // gets the command help object
+    embed.addField(`Command Description - ${commandFound.name.substr(0, 1).toUpperCase() + commandFound.name.substr(1)}`, `${commandFound.description}\n`) // embed command description
+if (commandFound.aliases.length > 0) embed.addField(`Command Aliases`, `\`${commandFound.aliases.join("\`, \`")}\``) // embed aliases
+else if (args[0]) embed.addField("Nothing Found", `Your search parameters returned no results.`) // if no results say so
+} else for (let i = 0; i < Client.commands.categories.length; i++) embed.addField(Client.commands.categories[i], `\`${commands.filter(c => c[1].help.category == Client.commands.categories[i]).map(c => c[1].help.name).join("\`, \`")}\``)
+    // otherwise send all commands and categories
+message.channel.send(embed)
 ```
 This command allows a user to query specific commands, and view all commands at one time. Play around with it if it doesn't make a lot of sense, and **please** read the code comments! They are there to help you.
 ___
