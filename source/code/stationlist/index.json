@@ -288,6 +288,65 @@
         "donate": "",
         "description": "About us In 2011, the Internet Radio Station began broadcasting globally, Hi On Line Radio. Founded and pioneered by Paul Hattink, supported by Hi.Fine The music genre that moves your body and stirs your soul is comprised of Global grooves and organic world rhythms.",
         "outdated": false
+    },
+    {
+        "name": "CVGM",
+        "url": "http://slacker.cvgm.net/cvgm192",
+        "statspos": 0,
+        "genre": "Video Game",
+        "website": "CVGM.net",
+        "donate": "",
+        "description": "Your home for video game, demo scene and computer related music. We stream 24 hours a day, 7 days a week, 365 days a year for your listening pleasure! This site is devoted to the men and women who devote their time creating some of the best music available in the world!",
+        "outdated": false
+    },
+    {
+        "name": "Radio Nintendo",
+        "url": "http://play.radionintendo.com/stream",
+        "statspos": 0,
+        "genre": "Video Game",
+        "website": "http://radionintendo.com/",
+        "donate": "",
+        "description": "Radio Nintendo provides the internet with real time live streaming Nintendo music. Unlike the current trend of customized radio stations, Radio Nintendo broadcasts the same content to all listeners like a traditional radio station. You can even tell smart home devices like Amazon Alexa to simply 'Play Radio Nintendo' and tune in to the same content you'd find on our website!",
+        "outdated": false
+    },
+    {
+        "name": "RPGamers",
+        "url": "http://stream.rpgamers.net:8000/rpgn",
+        "statspos": 0,
+        "genre": "Video Game",
+        "website": "http://rpgamers.net",
+        "donate": "",
+        "description": "Created originally as Locke's Fantasy World (LFW) back in 1996, and prior to that a local dial-up bulletin board community, the RPGamers Network has evolved and survived many challenges in over 23 years online!",
+        "outdated": false
+    },
+    {
+        "name": "Tofu",
+        "url": "https://radio.tofu.ovh:8443/radio.ogg",
+        "statspos": 0,
+        "genre": "JPop",
+        "website": "https://radio.tofu.ovh",
+        "donate": "",
+        "description": "Not much is known about this site - it plays a mix of JPop, And Anime OST's",
+        "outdated": false
+    },
+    {
+        "name": "Shinsen",
+        "url": "http://www.shinsen-radio.org:8000/shinsen-radio.192.opus",
+        "statspos": 0,
+        "genre": "JPop",
+        "website": "http://www.shinsen-radio.org",
+        "donate": "",
+        "description": "Not much is known about this site - it plays a mix of JPop, JRock, and Anime Music",
+        "outdated": false
+    },
+    {
+        "name": "Hyperadio",
+        "url": "http://hyperadio.ru:8000/live",
+        "statspos": 0,
+        "genre": "Chiptune",
+        "website": "http://hyperadio.retroscene.org/",
+        "donate": "",
+        "description": "Broadcast 24 hours a day with some special music blocks",
+        "outdated": false
     }
-
 ]
