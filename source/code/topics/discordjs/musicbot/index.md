@@ -17,7 +17,7 @@ There are a few modules we need to install with NPM first, we need [FFmpeg](http
 
 You can install them all with 
 ```bash
-npm install ffmpeg fluent-ffmpeg @discordjs/opus ytdl-core --save
+npm install ffmpeg fluent-ffmpeg @discordjs/opus --save
 ```
 
 Now we must ensure FFmpeg is installed on the OS the bot is running on. For Debian based Linux Distros it is as easy as doing `sudo apt install ffmpeg` but for Windows users it is a bit more complicated.
