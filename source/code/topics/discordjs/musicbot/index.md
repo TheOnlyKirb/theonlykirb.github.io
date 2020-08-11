@@ -13,7 +13,7 @@ It is entirely possible to integrate this code into a bot that doesn't follow th
 **Without** further ado, let's get into it!
 ___
 ## Prerequisites
-There are a few modules we need to install with NPM first, we need [FFmpeg](https://www.npmjs.com/package/ffmpeg)\*, [Fluent-ffmpeg](https://www.npmjs.com/package/fluent-ffmpeg), [@discord.js/opus](https://www.npmjs.com/package/@discordjs/opus), and lastly [ytdl-core](https://www.npmjs.com/package/ytdl-core)
+There are a few modules we need to install with NPM first, we need [FFmpeg](https://www.npmjs.com/package/ffmpeg)\*, [Fluent-ffmpeg](https://www.npmjs.com/package/fluent-ffmpeg), and lastly, [@discord.js/opus](https://www.npmjs.com/package/@discordjs/opus)
 
 You can install them all with 
 ```bash
