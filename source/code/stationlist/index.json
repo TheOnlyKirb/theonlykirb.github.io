@@ -11,7 +11,7 @@
     },
     {
         "name": "Rainwave Game",
-        "url": "http://relay-ams.gameowls.com/game.mp3",
+        "url": "https://relay.rainwave.cc/game.mp3",
         "statspos": 6,
         "genre": "Video Game",
         "website": "https://rainwave.cc/game",
@@ -27,16 +27,6 @@
         "website": "http://mikamp.com/",
         "donate": "",
         "description": "Not much is known about this station. It plays 24/7 Vocaloid.",
-        "outdated": false
-    },
-    {
-        "name": "HearMe",
-        "url": "http://hearme.fm:8311/stream",
-        "statspos": 0,
-        "genre": "Chill Hop",
-        "website": "http://hearme.fm/",
-        "donate": "",
-        "description": "This station is a bit elusive, not much is known about it. It currently has a Chill Hop stream available.",
         "outdated": false
     },
     {
@@ -67,26 +57,6 @@
         "website": "https://radio.m00.su/",
         "donate": "",
         "description": "A hard to find station that features a variety of radio station genres, all of which are commercial free.",
-        "outdated": false
-    },
-    {
-        "name": "ChillyFM",
-        "url": "http://radio.streemlion.com:1170/stream",
-        "statspos": 0,
-        "genre": "Chill",
-        "website": "https://chilly.fm/",
-        "donate": "",
-        "description": "A non-profit radio station that’s trying to think outside of the box. Owned by Audio Sanctuary, Inc., a non-profit corporation.",
-        "outdated": false
-    },
-    {
-        "name": "Autonomous Relaxation",
-        "url": "http://46.105.124.113:8162/autodj",
-        "statspos": 0,
-        "genre": "Chill",
-        "website": "http://rjbradio.com/",
-        "donate": "",
-        "description": "A non-profit radio station that’s trying to think outside of the box. Owned by Audio Sanctuary, Inc., a non-profit corporation.",
         "outdated": false
     },
     {
@@ -206,7 +176,7 @@
         "genre": "Hip Hop",
         "website": "https://party1019.com",
         "donate": "",
-        "description": "New York's Original Throwback Station! Listen at party1019.com or on @iheartradio and @radiodotcom app\nhttps://linktr.ee/party1019radio",
+        "description": "New York's Original Throwback Station! Listen at party1019.com or on @iheartradio and @radiodotcom app OR  @https://linktr.ee/party1019radio",
         "outdated": false
     },
     {
@@ -317,16 +287,6 @@
         "website": "http://rpgamers.net",
         "donate": "",
         "description": "Created originally as Locke's Fantasy World (LFW) back in 1996, and prior to that a local dial-up bulletin board community, the RPGamers Network has evolved and survived many challenges in over 23 years online!",
-        "outdated": false
-    },
-    {
-        "name": "Tofu",
-        "url": "https://radio.tofu.ovh:8443/radio.ogg",
-        "statspos": 0,
-        "genre": "JPop",
-        "website": "https://radio.tofu.ovh",
-        "donate": "",
-        "description": "Not much is known about this site - it plays a mix of JPop, And Anime OST's",
         "outdated": false
     },
     {
