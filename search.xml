@@ -4,40 +4,17 @@
   
     
     <entry>
-      <title>Projects Update</title>
-      <link href="/post/projects/"/>
-      <url>/post/projects/</url>
+      <title>Site WIP</title>
+      <link href="/post/wip/"/>
+      <url>/post/wip/</url>
       
-        <content type="html"><![CDATA[<p>Here is a current list of former, and active projects of mine.</p><h1 id="Former-Projects"><a href="#Former-Projects" class="headerlink" title="Former Projects"></a>Former Projects</h1><p><strong>Shout</strong> - An online social media platform to shout thoughts anonymously into the ether<br><strong>Cafe Discord Bot</strong> - An incremental chat game based on being idle and creating a Cafe<br><strong>Listener.Monster</strong> - An online radio hub with icecast2 relays for each indie station.</p><h1 id="Active-Projects"><a href="#Active-Projects" class="headerlink" title="Active Projects"></a>Active Projects</h1><ul><li>None</li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> new </tag>
-            
-            <tag> projects </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>New Site</title>
-      <link href="/post/newsite/"/>
-      <url>/post/newsite/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome!"></a>Welcome!</h1><p>This is my new github pages website/blog. I’ll be posting about interesting websites I find, new open source projects, and anything I find worthy to be discussed.</p><p>I aim for this to also be a hub for tutorials I write, and any code I decide to make free-to-use, and in general a place for me to toss my thoughts out online.</p><p>You are also probably wondering why it looks like it was made in the early 2000s, and why the cursor is a flame - the answer is, well- because I can.</p><p>I don’t believe the web has to be this modern chic look where all sites become indistinquishable from one another. If you want to have fun with your site, you absolutely can, and I encourage you to try it yourself- get out of the mindset that modern is always good, and “Material Design” is the best design.</p><p>Hope you enjoy!</p>]]></content>
+        <content type="html"><![CDATA[<p>This is a placeholder. I’m currently working on updating my site, thanks github pages for increasing my view limit.</p>]]></content>
       
       
       
         <tags>
             
-            <tag> new </tag>
-            
-            <tag> first </tag>
+            <tag> wip </tag>
             
         </tags>
       
