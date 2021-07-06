@@ -6,14 +6,14 @@
 title: 'The Watchpost'
 subtitle: 'The Watchpost'
 description: 'My Blog/Website, will Tutorials, and just my general thoughts.'
-keywords: 'code, blog, website, cofc'
+keywords: 'blog, portfolio'
 author: 'AJ Nicoloff'
 language: 'en'
 timezone: 'America/New_York'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://theonlykirb.github.io
+url: https://ajnicoloff.me
 root: /
 permalink: post/:title/
 permalink_defaults:
@@ -27,7 +27,6 @@ public_dir: public
 tag_dir: tags
 archive_dir: archives
 category_dir: categories
-code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
